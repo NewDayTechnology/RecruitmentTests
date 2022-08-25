@@ -1,33 +1,45 @@
 # RecruitmentTests
 
-Description WIP
+Hello! :wave:
 
-### Problem
+Welome to the repository that we send to candidates interviewing for technical roles.
+This is a public facing repository, and if you find this and are interested in working with us, please get in touch - we're pretty much always hiring.
 
-Given a character from the alphabet, print a diamond of its output with that character being the midpoint of the diamond.
+If you stumble upon this repository, are looking for work, and think that you might be a good fit, please get in touch.
 
-Examples
+## Our Interview Process
 
-    > diamond.exe A
-      A
+1. First stage interview - low tech, meet and greet.
+2. Technical test - take home, in your own time.
+3. Final interview and interactive code review / demo of technical test
+4. Decision / Offer
 
-    > diamond.exe B
-       A
-      B B
-       A
+## The Technical Test
 
-    > diamond.exe C
-        A
-       B B
-      C   C
-       B B
-        A
+We strongly believe that seeing some code you've written is the best way for us to understand your skillset, and if we'll be happy working together. That said, we understand people have different kinds of constraints on their time and personal life, so we offer the following options for technial asssesment:
 
-It may be helpful visualise the whitespace in your rendering like this:
+1. A technical test that you can take home and do in your own time. (Most common)
+2. A show and tell where you bring some code you have already written that you believe is interesting and exemplifis your skillset. (Second most common)
+3. A pairing excercise on the technical test with one of our engineers. (Least common)
 
-    > diamond.exe C
-    _ _ A _ _
-    _ B _ B _
-    C _ _ _ C
-    _ B _ B _
-    _ _ A _ _
+We have no bias or preference as to which of the above options you choose - though most candidates tend to prefer the take home technical test.
+
+Included in this repository is **The Diamond Kata** - our default technical test for engineering roles.
+
+The kata shouldn't take longer than about 60 minutes to complete - while we're not going to check, please don't spend more than about an hour or two solving this problem, we don't believe in labourious and long technical test processes and would rather have a conversation with you about your approaches if you struggle to complete the test.
+
+**We expect that your solution is supported by tests** - TDD and unit testing are at the heart of our engineering culture at NewDay, and we're very much looking for people who are able to write tests that are easy to understand and maintain.
+
+The diamond kata is well known, with many different solutions that are well documented - but we're looking to learn about *how your code* rather than just if you can complete the kata. We understand we live in the real world, and we won't penalise you for researching solutions, but equally, we'd recommend doing your own implementation!
+
+Good luck <3
+
+## Sending us your work
+
+We accept test results in any way!
+
+- Send us a link to your fork on GitHub
+- Send us a zip file or archive
+- Send us a link to a codepen / interactive sandbox
+
+We would advise against opening a pull request though, as this is a public facing repository.
