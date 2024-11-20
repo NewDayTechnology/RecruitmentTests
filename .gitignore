@@ -2,6 +2,28 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,node
 
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# Build results
+build/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
 ### macOS ###
 # General
 .DS_Store
