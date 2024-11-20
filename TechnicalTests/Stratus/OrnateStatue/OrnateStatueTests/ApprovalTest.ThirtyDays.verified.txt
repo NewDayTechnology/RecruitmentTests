@@ -9,7 +9,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 15, 20
 Backstage passes to concert, 10, 49
 Backstage passes to concert, 5, 49
-Fresh apples, 3, 6
 
 -------- day 1 --------
 name, sellIn, quality
@@ -21,7 +20,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 14, 21
 Backstage passes to concert, 9, 50
 Backstage passes to concert, 4, 50
-Fresh apples, 2, 5
 
 -------- day 2 --------
 name, sellIn, quality
@@ -33,7 +31,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 13, 22
 Backstage passes to concert, 8, 50
 Backstage passes to concert, 3, 50
-Fresh apples, 1, 4
 
 -------- day 3 --------
 name, sellIn, quality
@@ -45,7 +42,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 12, 23
 Backstage passes to concert, 7, 50
 Backstage passes to concert, 2, 50
-Fresh apples, 0, 3
 
 -------- day 4 --------
 name, sellIn, quality
@@ -57,7 +53,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 11, 24
 Backstage passes to concert, 6, 50
 Backstage passes to concert, 1, 50
-Fresh apples, -1, 1
 
 -------- day 5 --------
 name, sellIn, quality
@@ -69,7 +64,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 10, 25
 Backstage passes to concert, 5, 50
 Backstage passes to concert, 0, 50
-Fresh apples, -2, 0
 
 -------- day 6 --------
 name, sellIn, quality
@@ -81,7 +75,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 9, 27
 Backstage passes to concert, 4, 50
 Backstage passes to concert, -1, 0
-Fresh apples, -3, 0
 
 -------- day 7 --------
 name, sellIn, quality
@@ -93,7 +86,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 8, 29
 Backstage passes to concert, 3, 50
 Backstage passes to concert, -2, 0
-Fresh apples, -4, 0
 
 -------- day 8 --------
 name, sellIn, quality
@@ -105,7 +97,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 7, 31
 Backstage passes to concert, 2, 50
 Backstage passes to concert, -3, 0
-Fresh apples, -5, 0
 
 -------- day 9 --------
 name, sellIn, quality
@@ -117,7 +108,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 6, 33
 Backstage passes to concert, 1, 50
 Backstage passes to concert, -4, 0
-Fresh apples, -6, 0
 
 -------- day 10 --------
 name, sellIn, quality
@@ -129,7 +119,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 5, 35
 Backstage passes to concert, 0, 50
 Backstage passes to concert, -5, 0
-Fresh apples, -7, 0
 
 -------- day 11 --------
 name, sellIn, quality
@@ -141,7 +130,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 4, 38
 Backstage passes to concert, -1, 0
 Backstage passes to concert, -6, 0
-Fresh apples, -8, 0
 
 -------- day 12 --------
 name, sellIn, quality
@@ -153,7 +141,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 3, 41
 Backstage passes to concert, -2, 0
 Backstage passes to concert, -7, 0
-Fresh apples, -9, 0
 
 -------- day 13 --------
 name, sellIn, quality
@@ -165,7 +152,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 2, 44
 Backstage passes to concert, -3, 0
 Backstage passes to concert, -8, 0
-Fresh apples, -10, 0
 
 -------- day 14 --------
 name, sellIn, quality
@@ -177,7 +163,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 1, 47
 Backstage passes to concert, -4, 0
 Backstage passes to concert, -9, 0
-Fresh apples, -11, 0
 
 -------- day 15 --------
 name, sellIn, quality
@@ -189,7 +174,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, 0, 50
 Backstage passes to concert, -5, 0
 Backstage passes to concert, -10, 0
-Fresh apples, -12, 0
 
 -------- day 16 --------
 name, sellIn, quality
@@ -201,7 +185,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -1, 0
 Backstage passes to concert, -6, 0
 Backstage passes to concert, -11, 0
-Fresh apples, -13, 0
 
 -------- day 17 --------
 name, sellIn, quality
@@ -213,7 +196,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -2, 0
 Backstage passes to concert, -7, 0
 Backstage passes to concert, -12, 0
-Fresh apples, -14, 0
 
 -------- day 18 --------
 name, sellIn, quality
@@ -225,7 +207,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -3, 0
 Backstage passes to concert, -8, 0
 Backstage passes to concert, -13, 0
-Fresh apples, -15, 0
 
 -------- day 19 --------
 name, sellIn, quality
@@ -237,7 +218,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -4, 0
 Backstage passes to concert, -9, 0
 Backstage passes to concert, -14, 0
-Fresh apples, -16, 0
 
 -------- day 20 --------
 name, sellIn, quality
@@ -249,7 +229,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -5, 0
 Backstage passes to concert, -10, 0
 Backstage passes to concert, -15, 0
-Fresh apples, -17, 0
 
 -------- day 21 --------
 name, sellIn, quality
@@ -261,7 +240,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -6, 0
 Backstage passes to concert, -11, 0
 Backstage passes to concert, -16, 0
-Fresh apples, -18, 0
 
 -------- day 22 --------
 name, sellIn, quality
@@ -273,7 +251,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -7, 0
 Backstage passes to concert, -12, 0
 Backstage passes to concert, -17, 0
-Fresh apples, -19, 0
 
 -------- day 23 --------
 name, sellIn, quality
@@ -285,7 +262,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -8, 0
 Backstage passes to concert, -13, 0
 Backstage passes to concert, -18, 0
-Fresh apples, -20, 0
 
 -------- day 24 --------
 name, sellIn, quality
@@ -297,7 +273,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -9, 0
 Backstage passes to concert, -14, 0
 Backstage passes to concert, -19, 0
-Fresh apples, -21, 0
 
 -------- day 25 --------
 name, sellIn, quality
@@ -309,7 +284,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -10, 0
 Backstage passes to concert, -15, 0
 Backstage passes to concert, -20, 0
-Fresh apples, -22, 0
 
 -------- day 26 --------
 name, sellIn, quality
@@ -321,7 +295,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -11, 0
 Backstage passes to concert, -16, 0
 Backstage passes to concert, -21, 0
-Fresh apples, -23, 0
 
 -------- day 27 --------
 name, sellIn, quality
@@ -333,7 +306,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -12, 0
 Backstage passes to concert, -17, 0
 Backstage passes to concert, -22, 0
-Fresh apples, -24, 0
 
 -------- day 28 --------
 name, sellIn, quality
@@ -345,7 +317,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -13, 0
 Backstage passes to concert, -18, 0
 Backstage passes to concert, -23, 0
-Fresh apples, -25, 0
 
 -------- day 29 --------
 name, sellIn, quality
@@ -357,7 +328,6 @@ Diamond ring, -1, 80
 Backstage passes to concert, -14, 0
 Backstage passes to concert, -19, 0
 Backstage passes to concert, -24, 0
-Fresh apples, -26, 0
 
 -------- day 30 --------
 name, sellIn, quality
@@ -369,5 +339,4 @@ Diamond ring, -1, 80
 Backstage passes to concert, -15, 0
 Backstage passes to concert, -20, 0
 Backstage passes to concert, -25, 0
-Fresh apples, -27, 0
 

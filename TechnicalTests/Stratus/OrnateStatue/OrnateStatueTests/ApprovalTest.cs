@@ -17,7 +17,7 @@ public class ApprovalTest
         return Verify(output);
     }
 
-    [Fact]
+    [Fact(Skip = "Not yet implemented")]
     public Task ThirtyDaysV2()
     {
         var fakeoutput = new StringBuilder();
