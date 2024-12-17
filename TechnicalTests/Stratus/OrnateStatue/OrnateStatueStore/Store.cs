@@ -1,77 +1,82 @@
 ﻿namespace OrnateStatueStore;
 
-public class Store(IList<Item> items)
+public class Store
 {
+    private readonly IList<Item> _items;
+    public Store(IList<Item> items)
+    {
+        _items = items;
+    }
     public void UpdateQuality()
     {
-        for (var i = 0; i < items.Count; i++)
+        for (var i = 0; i < _items.Count; i++)
         {
-            if (items[i].Name != "Aged Brie" && items[i].Name != "Backstage passes to concert")
+            if (_items[i].Name != "Aged Brie" && _items[i].Name != "Backstage passes to concert")
             {
-                if (items[i].Quality > 0)
+                if (_items[i].Quality > 0)
                 {
-                    if (items[i].Name != "Diamond ring")
+                    if (_items[i].Name != "Diamond ring")
                     {
-                        items[i].Quality = items[i].Quality - 1;
+                        _items[i].Quality = _items[i].Quality - 1;
                     }
                 }
             }
             else
             {
-                if (items[i].Quality < 50)
+                if (_items[i].Quality < 50)
                 {
-                    items[i].Quality = items[i].Quality + 1;
+                    _items[i].Quality = _items[i].Quality + 1;
 
-                    if (items[i].Name == "Backstage passes to concert")
+                    if (_items[i].Name == "Backstage passes to concert")
                     {
-                        if (items[i].SellIn < 11)
+                        if (_items[i].SellIn < 11)
                         {
-                            if (items[i].Quality < 50)
+                            if (_items[i].Quality < 50)
                             {
-                                items[i].Quality = items[i].Quality + 1;
+                                _items[i].Quality = _items[i].Quality + 1;
                             }
                         }
 
-                        if (items[i].SellIn < 6)
+                        if (_items[i].SellIn < 6)
                         {
-                            if (items[i].Quality < 50)
+                            if (_items[i].Quality < 50)
                             {
-                                items[i].Quality = items[i].Quality + 1;
+                                _items[i].Quality = _items[i].Quality + 1;
                             }
                         }
                     }
                 }
             }
 
-            if (items[i].Name != "Diamond ring")
+            if (_items[i].Name != "Diamond ring")
             {
-                items[i].SellIn = items[i].SellIn - 1;
+                _items[i].SellIn = _items[i].SellIn - 1;
             }
 
-            if (items[i].SellIn < 0)
+            if (_items[i].SellIn < 0)
             {
-                if (items[i].Name != "Aged Brie")
+                if (_items[i].Name != "Aged Brie")
                 {
-                    if (items[i].Name != "Backstage passes to concert")
+                    if (_items[i].Name != "Backstage passes to concert")
                     {
-                        if (items[i].Quality > 0)
+                        if (_items[i].Quality > 0)
                         {
-                            if (items[i].Name != "Diamond ring")
+                            if (_items[i].Name != "Diamond ring")
                             {
-                                items[i].Quality = items[i].Quality - 1;
+                                _items[i].Quality = _items[i].Quality - 1;
                             }
                         }
                     }
                     else
                     {
-                        items[i].Quality = items[i].Quality - items[i].Quality;
+                        _items[i].Quality = _items[i].Quality - _items[i].Quality;
                     }
                 }
                 else
                 {
-                    if (items[i].Quality < 50)
+                    if (_items[i].Quality < 50)
                     {
-                        items[i].Quality = items[i].Quality + 1;
+                        _items[i].Quality = _items[i].Quality + 1;
                     }
                 }
             }
