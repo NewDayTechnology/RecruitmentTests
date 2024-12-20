@@ -21,12 +21,13 @@ Pretty simple, right? Well this is where it gets interesting:
 	- `Quality` increases by `2` when there are `10` days or less and by `3` when there are `5` days or less but
 	- `Quality` drops to `0` after the concert
 
+Just for clarification, an item can never have its `Quality` increase above `50`, however __"Diamond ring"__ is a
+highly sought after item and as such its `Quality` is `80` and it never alters.
+
 We have recently signed a supplier of fresh items. This requires an update to our system:
 
 - __"Fresh apples"__ items degrade in `Quality` twice as fast as normal items
 
 Feel free to make any changes to the `UpdateQuality` method and add any new code as long as everything
-still works correctly. However, do not alter the `Item` class or `Items` property.
+still works correctly. However, do not alter the `Item` class or `Store` constructor.
 
-Just for clarification, an item can never have its `Quality` increase above `50`, however __"Diamond ring"__ is a
-legendary item and as such its `Quality` is `80` and it never alters.
