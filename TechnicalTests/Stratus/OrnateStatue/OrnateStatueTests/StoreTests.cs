@@ -13,20 +13,18 @@ public class StoreTests
 
     [Theory]
     [InlineData(StandardProduct)]
-    [InlineData(AgedBrie)]
-    [InlineData(DiamondRing)]
-    [InlineData(BackstagePasses)]
     [InlineData(FreshApples)]
     public void Quality_should_never_be_negative(string name)
     {
         var items = new List<Item>
         {
             new () { Name = name, SellIn = 5, Quality = 0 },
+            new () { Name = name, SellIn = 5, Quality = 1 },
         };
         var store = new Store(items);
         store.UpdateQuality();
 
-        items[0].Quality.Should().BeGreaterThanOrEqualTo(0);
+        items.Should().AllSatisfy(x => x.Quality.Should().Be(0) );
     }
 
     [Theory]
