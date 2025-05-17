@@ -1,36 +1,54 @@
-﻿using DiamondKata;
-using DiamondKata.Services;
+﻿using DiamondKata.Application.Interfaces;
+using DiamondKata.Common.Models;
+using DiamondKata.Console;
+using DiamondKata.Domain.Models;
+using DiamondKata.Common;
+using DiamondKata.Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection;
 
-var generator = new DiamondGenerator(new DiamondPatternService());
+// Configure services
+var services = new ServiceCollection();
+services.AddDiamondKataServices();
+var serviceProvider = services.BuildServiceProvider();
 
-Console.WriteLine("Welcome to the Diamond Generator!");
-Console.WriteLine("Enter a letter (A-Z) to generate a diamond pattern, or 'Q' to quit.");
+// Initialize global exception handler
+GlobalExceptionHandler.Initialize();
 
-while (true)
+try
 {
-    Console.Write("\nEnter a letter: ");
-    var input = Console.ReadLine()?.Trim().ToUpper();
+    var generator = serviceProvider.GetRequiredService<IDiamondGeneratorService>();
+    var inputHandler = serviceProvider.GetRequiredService<IInputHandler>();
 
-    if (string.IsNullOrEmpty(input) || input == "Q")
+    while (true)
     {
-        Console.WriteLine("Goodbye!");
-        break;
-    }
+        Console.Write("\nEnter a letter (A-Z) or 'q' to quit: ");
+        var inputResult = inputHandler.GetInput();
 
-    if (input.Length != 1 || !char.IsLetter(input[0]))
-    {
-        Console.WriteLine("Please enter a single letter (A-Z).");
-        continue;
-    }
+        if (!inputResult.IsSuccess)
+        {
+            Console.WriteLine($"\nError: {inputResult.Error}");
+            continue;
+        }
 
-    try
-    {
-        var diamond = generator.GenerateDiamond(input[0]);
-        Console.WriteLine("\nGenerated Diamond Pattern:");
-        Console.WriteLine(diamond);
+        var input = inputResult.Value;
+        if (inputHandler.ShouldQuit(input))
+        {
+            Console.WriteLine("Goodbye!");
+            break;
+        }
+
+        var result = generator.GenerateDiamond(input);
+        if (result.IsSuccess)
+        {
+            Console.WriteLine("\n" + string.Join("\n", result.Value!.Lines));
+        }
+        else
+        {
+            Console.WriteLine($"\nError: {result.Error}");
+        }
     }
-    catch (ArgumentException ex)
-    {
-        Console.WriteLine($"Error: {ex.Message}");
-    }
+}
+catch (Exception ex)
+{
+    GlobalExceptionHandler.HandleException(ex);
 }

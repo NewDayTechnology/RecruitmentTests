@@ -8,7 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DiamondKata\DiamondKata.csproj" />
+    <ProjectReference Include="..\DiamondKata.Application\DiamondKata.Application.csproj" />
+    <ProjectReference Include="..\DiamondKata.Infrastructure\DiamondKata.Infrastructure.csproj" />
+    <ProjectReference Include="..\DiamondKata.Domain\DiamondKata.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
