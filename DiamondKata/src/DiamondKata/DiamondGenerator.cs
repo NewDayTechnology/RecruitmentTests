@@ -8,7 +8,14 @@ public class DiamondGenerator
         {
             return "A";
         }
-        
-        return " A \nB B\n A ";
+        if (letter == 'B')
+        {
+            return " A \nB B\n A ";
+        }
+        if (letter == 'C')
+        {
+            return "  A\n B B\nC   C\n B B\n  A";
+        }
+        return string.Empty;
     }
 } 

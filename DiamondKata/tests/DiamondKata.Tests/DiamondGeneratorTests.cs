@@ -32,4 +32,18 @@ public class DiamondGeneratorTests
         var expected = " A \nB B\n A ";
         Assert.Equal(expected, result);
     }
+
+    [Fact]
+    public void GenerateDiamond_WithC_ReturnsFiveLineDiamond()
+    {
+        // Arrange
+        var generator = new DiamondGenerator();
+
+        // Act
+        var result = generator.GenerateDiamond('C');
+
+        // Assert
+        var expected = "  A\n B B\nC   C\n B B\n  A";
+        Assert.Equal(expected, result);
+    }
 } 
