@@ -4,6 +4,11 @@ public class DiamondGenerator
 {
     public string GenerateDiamond(char letter)
     {
-        return "A";
+        if (letter == 'A')
+        {
+            return "A";
+        }
+        
+        return " A \nB B\n A ";
     }
 } 
