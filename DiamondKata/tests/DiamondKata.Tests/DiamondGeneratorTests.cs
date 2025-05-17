@@ -1,49 +1,52 @@
 using Xunit;
 using DiamondKata;
+using DiamondKata.Services;
 
 namespace DiamondKata.Tests;
 
 public class DiamondGeneratorTests
 {
-    [Fact]
-    public void GenerateDiamond_WithA_ReturnsSingleLineWithA()
+    private readonly IDiamondGenerator _generator;
+
+    public DiamondGeneratorTests()
     {
-        // Arrange
-        var generator = new DiamondGenerator();
-        
+        _generator = new DiamondGenerator(new DiamondPatternService());
+    }
+
+    [Theory]
+    [InlineData('A', "A")]
+    [InlineData('B', " A \nB B\n A ")]
+    [InlineData('C', "  A  \n B B \nC   C\n B B \n  A  ")]
+    [InlineData('D', "   A   \n  B B  \n C   C \nD     D\n C   C \n  B B  \n   A   ")]
+    public void GenerateDiamond_WithValidLetter_ReturnsCorrectDiamond(char letter, string expected)
+    {
         // Act
-        var result = generator.GenerateDiamond('A');
-        
+        var result = _generator.GenerateDiamond(letter);
+
         // Assert
-        var expected = "A";
         Assert.Equal(expected, result);
     }
 
-    [Fact]
-    public void GenerateDiamond_WithB_ReturnsThreeLineDiamond()
+    [Theory]
+    [InlineData('a')]
+    [InlineData('b')]
+    [InlineData('c')]
+    public void GenerateDiamond_WithLowerCaseLetter_ReturnsUpperCaseDiamond(char letter)
     {
-        // Arrange
-        var generator = new DiamondGenerator();
-        
         // Act
-        var result = generator.GenerateDiamond('B');
-        
+        var result = _generator.GenerateDiamond(letter);
+
         // Assert
-        var expected = " A \nB B\n A ";
-        Assert.Equal(expected, result);
+        Assert.Equal(_generator.GenerateDiamond(char.ToUpper(letter)), result);
     }
 
-    [Fact]
-    public void GenerateDiamond_WithC_ReturnsFiveLineDiamond()
+    [Theory]
+    [InlineData('1')]
+    [InlineData('@')]
+    [InlineData(' ')]
+    public void GenerateDiamond_WithInvalidInput_ThrowsArgumentException(char invalidInput)
     {
-        // Arrange
-        var generator = new DiamondGenerator();
-
-        // Act
-        var result = generator.GenerateDiamond('C');
-
-        // Assert
-        var expected = "  A\n B B\nC   C\n B B\n  A";
-        Assert.Equal(expected, result);
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() => _generator.GenerateDiamond(invalidInput));
     }
 } 

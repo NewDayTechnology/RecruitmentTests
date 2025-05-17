@@ -1,21 +1,23 @@
+using DiamondKata.Services;
+
 namespace DiamondKata;
 
-public class DiamondGenerator
+/// <summary>
+/// Implementation of IDiamondGenerator that generates diamond patterns.
+/// </summary>
+public class DiamondGenerator : IDiamondGenerator
 {
+    private readonly DiamondPatternService _patternService;
+
+    public DiamondGenerator(DiamondPatternService? patternService = null)
+    {
+        _patternService = patternService ?? new DiamondPatternService();
+    }
+
+    /// <inheritdoc />
     public string GenerateDiamond(char letter)
     {
-        if (letter == 'A')
-        {
-            return "A";
-        }
-        if (letter == 'B')
-        {
-            return " A \nB B\n A ";
-        }
-        if (letter == 'C')
-        {
-            return "  A\n B B\nC   C\n B B\n  A";
-        }
-        return string.Empty;
+        var pattern = _patternService.GeneratePattern(letter);
+        return string.Join("\n", pattern);
     }
 } 
