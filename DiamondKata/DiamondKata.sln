@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata", "src\DiamondK
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata.Tests", "tests\DiamondKata.Tests\DiamondKata.Tests.csproj", "{B2586D55-BC4F-4501-8B5E-998980160FC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata.Console", "src\DiamondKata.Console\DiamondKata.Console.csproj", "{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{B2586D55-BC4F-4501-8B5E-998980160FC7}.Release|x64.Build.0 = Release|Any CPU
 		{B2586D55-BC4F-4501-8B5E-998980160FC7}.Release|x86.ActiveCfg = Release|Any CPU
 		{B2586D55-BC4F-4501-8B5E-998980160FC7}.Release|x86.Build.0 = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|x64.Build.0 = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Debug|x86.Build.0 = Debug|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|x64.ActiveCfg = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|x64.Build.0 = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|x86.ActiveCfg = Release|Any CPU
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +64,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7B66EE86-21DB-498B-A01D-53A6E94ED01C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{B2586D55-BC4F-4501-8B5E-998980160FC7} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{41F97A00-A7F0-4A9A-B3BA-C4DEE24389A0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
