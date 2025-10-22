@@ -34,7 +34,32 @@ Given a city name, return the current weather (temperature and weather condition
    - Use the coordinates to fetch current weather
    - Endpoint: `https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true`
    - Extract current weather data from the response
-
+```json
+{
+    "latitude":51.5,
+    "longitude":-0.120000124,
+    "timezone":"GMT","timezone_abbreviation":"GMT",
+    "elevation":23.0,
+    "current_weather_units": {
+        "time":"iso8601",
+        "interval":"seconds",
+        "temperature":"°C",
+        "windspeed":"km/h",
+        "winddirection":"°",
+        "is_day":"",
+        "weathercode":"wmo code"
+    },
+    "current_weather":{
+        "time":"2025-10-22T15:00",
+        "interval":900,
+        "temperature":15.0,
+        "windspeed":9.0,
+        "winddirection":217,
+        "is_day":1,
+        "weathercode":3
+    }
+}
+```
 ### API Endpoint to Implement
 
 ### Expected Response Format
