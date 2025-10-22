@@ -1,22 +1,84 @@
-# Weather Aggregator - Technical Assessment
+﻿# Weather Aggregator - Technical Assessment
 
 ## Objective
 
-Implement a GET endpoint in the `WeatherForecastController` that fetches weather data from the Open-Meteo API and returns it in a specified format.
+Implement an endpoint in the `WeatherForecastController` that accepts a city name and returns the current weather for that city by combining data from two Open-Meteo APIs.
 
 ## Requirements
 
+### Use Case: City + Current Weather Snapshot
+
+Given a city name, return the current weather (temperature and weather condition) for that city.
+
+### Implementation Steps
+
+1. **Geocoding API Call**
+   - Use the Open-Meteo Geocoding API to convert city name to coordinates
+   - Endpoint: `https://geocoding-api.open-meteo.com/v1/search?name={cityName}&count=1&language=en&format=json`
+   - This contains `latitude` and `longitude`
+```json
+{   "results": [
+    {  
+        "name":"London",
+        "latitude":51.50853,
+        "longitude":-0.12574,
+        "country_code":"GB",
+       ...
+        "timezone":"Europe/London",
+        "population":8961989,
+        "country":"United Kingdom"
+   } ]
+}
+```
+2. **Weather Forecast API Call**
+   - Use the coordinates to fetch current weather
+   - Endpoint: `https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true`
+   - Extract current weather data from the response
+
 ### API Endpoint to Implement
-- **GET** `/weatherforecast`
-- Fetch data from: `https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&current_weather=true`
-- Return a response with the following structure:
-  ```json
-  {
-    "temperature": double,
-    "windspeed": double,
-    "weathercode": int
+
+### Expected Response Format
+
+```json
+{
+  "city": "London",
+  "coordinates": {
+    "latitude": 51.5074,
+    "longitude": -0.1278
+  },
+  "current": {
+    "temperatureC": 14.3,
+    "weatherCode": 3
   }
-  ```
+}
+```
+
+### Weather Code Reference
+
+The `weatherCode` field indicates the current weather condition according to WMO Weather interpretation codes:
+
+| `weathercode` | Description                                  | Example Display                 |
+| -------------:| -------------------------------------------- | ------------------------------- |
+|          **0** | Clear sky                                    | ☀️ Sunny                        |
+|    **1**, **2**, **3** | Mainly clear, partly cloudy, overcast        | 🌤️ Partly Cloudy / ☁️ Overcast |
+|         **45**, **48** | Fog and depositing rime fog                  | 🌫️ Fog                         |
+| **51**, **53**, **55** | Drizzle: Light, moderate, dense intensity    | 🌦️ Light Drizzle               |
+|         **56**, **57** | Freezing drizzle: Light, dense intensity     | 🌧️❄️ Freezing Drizzle          |
+| **61**, **63**, **65** | Rain: Slight, moderate, heavy intensity      | 🌧️ Rain                        |
+|         **66**, **67** | Freezing rain: Light, heavy intensity        | 🌨️ Freezing Rain               |
+| **71**, **73**, **75** | Snow fall: Slight, moderate, heavy intensity | ❄️ Snow                         |
+|                 **77** | Snow grains                                  | ❄️ Snow Grains                  |
+| **80**, **81**, **82** | Rain showers: Slight, moderate, violent      | 🌦️ Showers                     |
+|         **85**, **86** | Snow showers: Slight, heavy                  | 🌨️ Snow Showers                |
+|                 **95** | Thunderstorm: Slight or moderate             | ⛈️ Thunderstorm                 |
+|         **96**, **99** | Thunderstorm with hail: Slight, heavy        | ⛈️ Thunderstorm + Hail          |
+
+### Error Handling
+
+Consider handling:
+- City not found (404)
+- Invalid city name
+- API communication failures
 
 ## Getting Started
 
@@ -34,6 +96,10 @@ The API will be available at: `https://localhost:5218` (or check console output 
 
 Access Swagger UI at: `https://localhost:5218/swagger`
 
+### Testing Manually
+
+Use swagger UI or use the included `WeatherAggregator.http` file in Visual Studio/VS Code.
+
 ### Running Tests
 ```bash
 dotnet test
@@ -41,16 +107,19 @@ dotnet test
 
 ## What We're Looking For
 
-- Proper implementation of the HTTP GET endpoint
-- Correct integration with the Open-Meteo API
-- Appropriate error handling
-- Clean, maintainable code
-- Working solution that passes tests
+- Proper RESTful implementation of the endpoint
+- Tests that demonstrate that the new endpoint works as expected
+- Correct integration with both Open-Meteo APIs (Geocoding + Weather Forecast)
+- Appropriate error handling (city not found, API failures)
+- Clean, maintainable code following best practices
+- Correct mapping of API responses to the expected output format
+- Efficient REST API request handling
 
 ## Project Structure
 
 - `WeatherAggregator/` - Main Web API project
   - `Controllers/WeatherForecastController.cs` - **Your implementation goes here**
 - `WeatherAggregatorTests/` - Unit test project
+
 
 Good luck!
